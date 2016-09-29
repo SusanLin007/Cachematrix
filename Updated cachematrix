@@ -1,0 +1,34 @@
+# Cachematrix#
+# Week 3 Assignment#
+
+#makeCacheMatrix#
+#Create Cache Matrix#
+
+makeCacheMatrix<-function(x = matrix()){
+        inv<-NULL
+        set<-function(y){
+                x<<-y
+                inv<<-NULL
+        }
+        get<-function() x
+        setinversion<-function(inversion) inv<<-inversion
+        getinversion<-function() inv
+        list(set = set,get = get,
+             setinversion = setinversion,
+             getinversion = getinversion)
+}
+
+#cacheSolve#
+#CacheSolve computes the inverse of the matrix. If the matrix is already is the cache, the function retrieve#
+
+cacheSolve<-function(x,...){
+        inv<-x$getinversion()
+        if(!is.null(inv)){
+                message("getting cached data")
+                return(inv)
+        }
+        data<-x$get()
+        inv<-solve(data,...)
+        x$setinversion(inv)
+        inv
+}
