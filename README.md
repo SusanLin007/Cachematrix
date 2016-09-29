@@ -1,6 +1,8 @@
 # Cachematrix#
 # Week 3 Assignment#
 
+makeCacheMatrix<-funciton(x = matrix()){
+        inv<-NULL
 makeCacheMatrix<-function(x = matrix()){
         inv<-NULL
         set<-function(y){
