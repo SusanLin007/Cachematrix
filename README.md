@@ -1,6 +1,7 @@
 # Cachematrix#
 # Week 3 Assignment#
 
+#makeCacheMatrix#
 makeCacheMatrix<-function(x = matrix()){
         inv<-NULL
         set<-function(y){
@@ -15,7 +16,7 @@ makeCacheMatrix<-function(x = matrix()){
              getinversion = getinversion)
 }
 
-
+#cacheSolve#
 cacheSolve<-function(x,...){
         inv<-x$getinversion()
         if(!is.null(inv)){
