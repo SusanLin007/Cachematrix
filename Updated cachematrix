@@ -2,7 +2,7 @@
 # Week 3 Assignment#
 
 #makeCacheMatrix#
-#Create Cache Matrix#
+##This function creates a special "matrix" object that can cache its inverse.##
 
 makeCacheMatrix<-function(x = matrix()){
         inv<-NULL
@@ -19,7 +19,7 @@ makeCacheMatrix<-function(x = matrix()){
 }
 
 #cacheSolve#
-#CacheSolve computes the inverse of the matrix. If the matrix is already is the cache, the function retrieve#
+#CacheSolve computes the inverse of the matrix. If the matrix is already is the cache, the function retrieve makeCacheMatrix above. 
 
 cacheSolve<-function(x,...){
         inv<-x$getinversion()
